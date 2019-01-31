@@ -1,0 +1,36 @@
+{
+  "name": "bumperbot",
+  "version": "1.0.0",
+  "description": "Automatically bump your WordPress plugin version number",
+  "author": "Chris Van Patten <chris@tomodomo.co>",
+  "license": "MIT",
+  "repository": "https://github.com/chrisvanpatten/bumperbot.git",
+  "homepage": "https://github.com/chrisvanpatten/bumperbot",
+  "bugs": "https://github.com/chrisvanpatten/bumperbot/issues",
+  "scripts": {
+    "dev": "nodemon",
+    "start": "probot run ./index.js"
+  },
+  "dependencies": {
+    "@martin-pettersson/wp-get-file-data": "^0.1.1",
+    "js-base64": "^2.5.1",
+    "lodash": "^4.17.11",
+    "probot": "^7.2.0",
+    "semver": "^5.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.2",
+    "smee-client": "^1.0.2",
+    "standard": "^10.0.3"
+  },
+  "engines": {
+    "node": ">= 8.3.0"
+  },
+  "nodemonConfig": {
+    "exec": "npm start",
+    "watch": [
+      ".env",
+      "."
+    ]
+  }
+}
